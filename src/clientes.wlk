@@ -12,12 +12,14 @@ object anamaria {
 }
 
 
-object teresa{ 
+object teresa { 
 	method precioPactadoPorKm(){return 22}
 	
 	
 }
-object melina{
-	
-	
+
+object melina {
+	var _cliente=null;
+	method reemplaza(cliente){ _cliente = cliente }
+	method precioPactadoPorKm() { return (_cliente.precioPactadoPorKm()-3) }
 }
